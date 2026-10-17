@@ -4,7 +4,7 @@
 
 A full-stack web application that cleans, deduplicates, validates, and scores business leads to help acquisition teams identify and prioritize potential opportunities.
 
-**[Live Demo](https://lead-scorer-xi.vercel.app/)**
+Live Demo: https://lead-scorer-xi.vercel.app/
 
 <img width="1919" height="986" alt="image" src="https://github.com/user-attachments/assets/0bc2cae3-f9d3-4dc2-b675-df9fad7c480f" />
 
