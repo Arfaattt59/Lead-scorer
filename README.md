@@ -1,5 +1,7 @@
 # Acquisition-Fit Lead Scorer
 
+Live Demo: https://lead-scorer-xi.vercel.app/
+
 Upload a CSV of small businesses. The tool merges duplicates, flags bad emails, scores each business from 0 to 100 for how well it fits an acquisition profile you set, and exports the ranked list. Every score comes with the reason for each factor.
 
 I built it for the Caprae Capital pre-work challenge, with AI assistance (Claude). I can explain every part of it.
