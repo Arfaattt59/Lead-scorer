@@ -1,7 +1,8 @@
-<img width="1919" height="986" alt="image" src="https://github.com/user-attachments/assets/0bc2cae3-f9d3-4dc2-b675-df9fad7c480f" /># Acquisition-Fit Lead Scorer
+# Acquisition-Fit Lead Scorer
 
 Live Demo: https://lead-scorer-xi.vercel.app/
 
+<img width="1919" height="986" alt="image" src="https://github.com/user-attachments/assets/0bc2cae3-f9d3-4dc2-b675-df9fad7c480f" />
 
 Upload a CSV of small businesses. The tool merges duplicates, flags bad emails, scores each business from 0 to 100 for how well it fits an acquisition profile you set, and exports the ranked list. Every score comes with the reason for each factor.
 
