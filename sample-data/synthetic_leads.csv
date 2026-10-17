@@ -1,0 +1,74 @@
+Business Name,Industry,City,State,Website,Email,Phone,Employees,Founded,Annual Revenue,Owner Name,Owner Age,Google Rating,Review Count
+Evergreen Cedar Auto Care Co.,Auto Repair,Wichita,KS,https://www.evergreencedarautocare.example,owner@evergreencedarautocare,(316) 555-0113,26,2003,10800000,Sam Kowalski,57,4.2,84
+Bluebird Evergreen Roofing,Roofing Contractor,Reno,NV,https://www.bluebirdevergreenroofing.example,info@bluebirdevergreenroofing.example,(775) 555-0150,29-37,2006,7100000,Jordan Brooks,61,4.6,39
+Pioneer Redwood Heating & Air,HVAC Contractor,fort wayne,IN,,info@pioneerredwoodheatingair.example,(260) 555-0193,,,4600000,Taylor Brooks,70,4.4,117
+Sunrise Hilltop Cleaning Co,Commercial Cleaning,Wichita,KS,https://www.sunrisehilltopcleaningco.example,sam.nguyen@sunrisehilltopcleaningco.example,(316) 555-0159,29,1988,$2.7M,Sam Nguyen,64,4.3,179
+Bluebird Keystone Auto Care,Auto Repair,Spokane,WA,https://www.bluebirdkeystoneautocare.example,info@bluebirdkeystoneautocare.example,(509) 555-0148,34-42,1998,$7.4M,Riley Hughes,57,3.7,12
+Pioneer Prairie Cleaning Co,Commercial Cleaning,Salem,OR,https://www.pioneerprairiecleaningco.example,info@pioneerprairiecleaningco.example,(503) 555-0168,83,,6100000,Sam Fischer,61,4.8,105
+Harbor Evergreen Roofing LLC,Roofing Contractor,Wichita,KS,https://www.harborevergreenroofing.example,jamie.lindqvist@harborevergreenroofing.example,(316) 555-0147,1-7,2024,300k,Jamie Lindqvist,39,,
+Silverline Maple Auto Care,Auto Repair,Omaha,NE,https://www.silverlinemapleautocare.example,pat.patel@silverlinemapleautocare.example,(402) 555-0196,33,1993,$7.0M,Pat Patel,,4.3,41
+Cedar Ironwood Fitness LLC,Fitness Studio,Salem,OR,https://www.cedarironwoodfitness.example,taylor.fischer@cedarironwoodfitness.example,(503) 555-0131,3,2019,$0.3M,Taylor Fischer,27,3.9,4
+Redwood Copper Pest Control,Pest Control,Dayton,OH,https://www.redwoodcopperpestcontrol.example,no-email,(937) 555-0158,,2020,25000k,Chris Rivera,45,3.2,18
+Prairie Sunrise Roofing,Roofing Contractor,Wichita,KS,http://prairiesunriseroofing.example/,robin.brooks@prairiesunriseroofing.example,(316) 555-0152,30-38,2013,$12.2M,,52,3.9,92
+Evergreen Sunrise Plumbing LLC,Plumbing Services,Des Moines,IA,https://www.evergreensunriseplumbing.example,morgan.walker@evergreensunriseplumbing.example,(515) 555-0191,38,2009,6300k,,68,4.8,232
+Northstar Sunrise Cleaning Co,Commercial Cleaning,Knoxville,TN,https://www.northstarsunrisecleaningco.example,jamie.kowalski@northstarsunrisecleaningco.example,(865) 555-0184,41,,,,59,4.7,270
+Prairie Sunrise Roofing,Roofing Contractor,Wichita,KS,https://www.prairiesunriseroofing.example,robin.brooks@prairiesunriseroofing.example,(316) 555-0152,34,2013,$12.2M,,52,3.9,92
+Evergreen Keystone Roofing Inc.,Roofing Contractor,Omaha,NE,https://www.evergreenkeystoneroofing.example,info@evergreenkeystoneroofing.example,,26,,2500k,Pat Rivera,63,4.3,53
+Northstar Silverline Plumbing Co.,Plumbing Services,Salem,OR,https://www.northstarsilverlineplumbing.example,casey.walker@northstarsilverlineplumbing.example,(503) 555-0100,59-67,2017,$8.0M,Casey Walker,,3.8,128
+Prairie Evergreen Heating & Air Co.,HVAC Contractor,Tulsa,OK,https://www.prairieevergreenheatingair.example,owner@prairieevergreenheatingair,,55,2004,12000000,,,4.4,107
+Evergreen Sunrise Plumbing,Plumbing Services,Des Moines,IA,https://www.evergreensunriseplumbing.example,morgan.walker@evergreensunriseplumbing.example,(515) 555-0191,38,2009,$6.3M,,68,4.8,232
+Lakeside Prairie Lawn & Landscape,Landscaping,Wichita,KS,https://www.lakesideprairielawnlandscape.example,owner@lakesideprairielawnlandscape,,9,2007,4500000,Riley Rivera,59,4.6,136
+LAKESIDE HARBOR CLEANING CO,Commercial Cleaning,Dayton,OH,,casey.patel@lakesideharborcleaningco.example,(937) 555-0104,,1998,,Casey Patel,,4.4,57
+Lakeside Bluebird Heating & Air Co.,HVAC Contractor,Salem,OR,,owner@lakesidebluebirdheatingair,(503) 555-0113,55,2008,10400000,Robin Dunn,50,4.6,84
+Summit Redwood Accounting Inc.,Accounting Firm,Wichita,KS,https://www.summitredwoodaccounting.example,info@summitredwoodaccounting.example,(316) 555-0158,61-69,2020,11700000,,46,3.8,141
+Hilltop Lakeside Roofing Inc.,Roofing Contractor,Madison,WI,https://www.hilltoplakesideroofing.example,jordan.nguyen@hilltoplakesideroofing.example,(608) 555-0176,,2008,$4.4M,Jordan Nguyen,69,4.7,113
+Summit Copper Family Dental,Dental Practice,Salem,OR,https://www.summitcopperfamilydental.example,taylor.fischer@summitcopperfamilydental.example,(503) 555-0116,2,,,Taylor Fischer,34,3.3,19
+Harbor Northstar Plumbing LLC,Plumbing Services,Raleigh,NC,,info@harbornorthstarplumbing.example,(919) 555-0196,42,2012,,Jordan Moreno,67,4.9,93
+Harbor Harbor Fitness,Fitness Studio,Albany,NY,http://harborharborfitness.example/,info@harborharborfitness.example,(518) 555-0192,,2023,60000000,Sam Hughes,38,2.9,13
+Copper Evergreen Labs,Software Startup,Raleigh,NC,https://www.copperevergreenlabs.example,morgan.moreno@copperevergreenlabs.example,(919) 555-0117,396-404,2018,60000000,Morgan Moreno,34,,
+Willow Pioneer Pest Control LLC,Pest Control,Wichita,KS,,jamie.kowalski@willowpioneerpestcontrol.example,(316) 555-0174,19,2008,7400000,Jamie Kowalski,62,4.8,34
+Lakeside Maple Accounting LLC,Accounting Firm,Albany,NY,https://www.lakesidemapleaccounting.example,info@lakesidemapleaccounting.example,(518) 555-0106,52,2000,8700000,Riley Patel,55,,
+Keystone Bluebird Family Dental Inc.,Dental Practice,Tulsa,OK,https://www.keystonebluebirdfamilydental.example,pat.brooks@keystonebluebirdfamilydental.example,(918) 555-0194,,2013,$7.7M,Pat Brooks,46,4.7,135
+Bluebird Ironwood Media,Marketing Agency,Columbus,OH,https://www.bluebirdironwoodmedia.example,sam.rivera@bluebirdironwoodmedia.example,(614) 555-0180,400,,60000k,Sam Rivera,28,2.9,1
+Granite Ridge Plumbing,Plumbing Services,Knoxville,TN,,morgan.brooks@graniteridgeplumbing.example,(865) 555-0170,16,2004,3000000,Morgan Brooks,68,4.5,59
+Northstar Prairie Roofing,Roofing Contractor,Raleigh,NC,https://www.northstarprairieroofing.example,alex.rivera@northstarprairieroofing.example,(919) 555-0170,24,,$2.1M,Alex Rivera,69,4.8,203
+Ridge Evergreen Auto Care,Auto Repair,Boise,ID,https://www.ridgeevergreenautocare.example,info@ridgeevergreenautocare.example,(208) 555-0162,11,2005,$7.3M,Alex Nguyen,64,4.5,250
+Harbor Harbor Fitness,Fitness Studio,Albany,NY,https://www.harborharborfitness.example,info@harborharborfitness.example,(518) 555-0192,,2023,$60.0M,Sam Hughes,38,2.9,13
+Granite Keystone Plumbing,Plumbing Services,Dayton,OH,https://www.granitekeystoneplumbing.example,info@granitekeystoneplumbing.example,(937) 555-0165,30,2012,,Jordan Walker,63,,
+Maple Redwood Roofing Inc.,Roofing Contractor,Tulsa,OK,https://www.mapleredwoodroofing.example,info@mapleredwoodroofing.example,(918) 555-0159,60,,$0.9M,Alex Lindqvist,47,3.7,49
+Cedar Granite Auto Care Inc.,Auto Repair,Spokane,WA,https://www.cedargraniteautocare.example,dana.nguyen@cedargraniteautocare.example,(509) 555-0183,76,2009,$2.0M,Dana Nguyen,47,4.8,106
+Granite Bluebird Pest Control LLC,Pest Control,Salem,OR,https://www.granitebluebirdpestcontrol.example,dana.brooks@granitebluebirdpestcontrol.example,(503) 555-0192,33,1993,,Dana Brooks,58,4.3,197
+Redwood Maple Auto Care,Auto Repair,Spokane,WA,https://www.redwoodmapleautocare.example,,(509) 555-0196,30,2006,,Chris Moreno,,4.6,166
+Granite Harbor Lawn & Landscape Inc.,Landscaping,Fort Wayne,IN,https://www.graniteharborlawnlandscape.example,pat.walker@graniteharborlawnlandscape.example,(260) 555-0110,19-27,2010,,,70,4.7,233
+Granite Northstar Roofing LLC,Roofing Contractor,Dayton,OH,https://www.granitenorthstarroofing.example,morgan.patel@granitenorthstarroofing.example,(937) 555-0187,55,1996,$7.5M,Morgan Patel,,3.8,88
+Silverline Granite Heating & Air Inc.,HVAC Contractor,Salem,OR,https://www.silverlinegraniteheatingair.example,alex.kowalski@silverlinegraniteheatingair.example,(503) 555-0142,400,,$60.0M,Alex Kowalski,39,3.1,18
+Pioneer Redwood Heating & Air,HVAC Contractor,Fort Wayne,IN,https://www.pioneerredwoodheatingair.example,info@pioneerredwoodheatingair.example,(260) 555-0193,,,$4.6M,Taylor Brooks,70,4.4,117
+Sunrise Redwood Lawn & Landscape Inc.,Landscaping,Fort Wayne,IN,,not provided,,18-26,,$6.2M,Riley Patel,69,4.5,284
+Pioneer Redwood Cleaning Co,Commercial Cleaning,Fort Wayne,IN,https://www.pioneerredwoodcleaningco.example,chris.kowalski@pioneerredwoodcleaningco.example,(260) 555-0139,25,2005,,Chris Kowalski,,,
+BLUEBIRD IRONWOOD MEDIA,Marketing Agency,Columbus,OH,https://www.bluebirdironwoodmedia.example,sam.rivera@bluebirdironwoodmedia.example,(614) 555-0180,,,,Sam Rivera,,2.9,1
+Bluebird Ridge Media Co.,Marketing Agency,Spokane,WA,,alex.fischer@bluebirdridgemedia.example,(509) 555-0114,250,2024,150000,,43,2.9,12
+"Granite Keystone Plumbing, LLC",Plumbing Services,Dayton,OH,https://www.granitekeystoneplumbing.example,info@granitekeystoneplumbing.example,(937) 555-0165,30,2012,,Jordan Walker,63,,
+Ridge Pioneer Heating & Air,HVAC Contractor,Dayton,OH,https://www.ridgepioneerheatingair.example,riley.lindqvist@ridgepioneerheatingair.example,(937) 555-0108,12,,7700000,Riley Lindqvist,58,4.5,45
+Lakeside Prairie Lawn & Landscape,Landscaping,wichita,KS,,owner@lakesideprairielawnlandscape,,9,2007,4500000,Riley Rivera,59,4.6,136
+Maple Pioneer Accounting,Accounting Firm,Tulsa,OK,https://www.maplepioneeraccounting.example,info@maplepioneeraccounting.example,(918) 555-0142,20,1998,1500k,Pat Dunn,64,3.7,18
+Granite Northstar Roofing,Roofing Contractor,Dayton,OH,https://www.granitenorthstarroofing.example,morgan.patel@granitenorthstarroofing.example,(937) 555-0187,55,1996,$7.5M,Morgan Patel,,3.8,88
+Sunrise Prairie Media Inc.,Marketing Agency,Columbus,OH,https://www.sunriseprairiemedia.example,info@sunriseprairiemedia.example,(614) 555-0156,1,2019,60000k,Jamie Brooks,31,3.9,12
+Northstar Sunrise Cleaning Co,Commercial Cleaning,knoxville,TN,,jamie.kowalski@northstarsunrisecleaningco.example,(865) 555-0184,41,,,,59,4.7,270
+Harbor Prairie Cleaning Co Inc.,Commercial Cleaning,Knoxville,TN,https://www.harborprairiecleaningco.example,info@harborprairiecleaningco.example,(865) 555-0123,6,2002,$11.5M,Morgan Lindqvist,60,4.3,127
+Ridge Ironwood Fitness Co.,Fitness Studio,Salem,OR,,info@ridgeironwoodfitness.example,(503) 555-0179,250,2018,150k,Riley Nguyen,32,2.8,20
+Ridge Cedar Cleaning Co LLC,Commercial Cleaning,Dayton,OH,https://www.ridgecedarcleaningco.example,robin.kowalski@ridgecedarcleaningco.example,(937) 555-0193,15-23,2013,14100000,Robin Kowalski,48,4.7,100
+GRANITE NORTHSTAR ROOFING LLC,Roofing Contractor,Dayton,OH,https://www.granitenorthstarroofing.example,morgan.patel@granitenorthstarroofing.example,(937) 555-0187,,1996,,Morgan Patel,,3.8,88
+Harbor Prairie Labs Inc.,Software Startup,Raleigh,NC,https://www.harborprairielabs.example,info@harborprairielabs.example,,,2024,25000000,Robin Hughes,32,3.2,14
+Sunrise Prairie Media Inc.,Marketing Agency,Columbus,OH,http://sunriseprairiemedia.example/,info@sunriseprairiemedia.example,(614) 555-0156,1,2019,60000k,Jamie Brooks,31,3.9,12
+Prairie Granite Lawn & Landscape,Landscaping,Omaha,NE,https://www.prairiegranitelawnlandscape.example,robin.fischer@prairiegranitelawnlandscape.example,,,2016,$14.3M,Robin Fischer,48,4.5,24
+Silverline Evergreen Auto Care Inc.,Auto Repair,Des Moines,IA,https://www.silverlineevergreenautocare.example,info@silverlineevergreenautocare.example,(515) 555-0127,4,2000,8900000,Riley Fischer,58,4.7,62
+Evergreen Evergreen Roofing,Roofing Contractor,Madison,WI,https://www.evergreenevergreenroofing.example,chris.hughes@evergreenevergreenroofing.example,(608) 555-0162,23,1989,,Chris Hughes,64,4.8,290
+Lakeside Harbor Cleaning Co,Commercial Cleaning,Dayton,OH,,casey.patel@lakesideharborcleaningco.example,(937) 555-0104,90,1998,$14.4M,Casey Patel,,4.4,57
+Summit Harbor Media LLC,Marketing Agency,Wichita,KS,https://www.summitharbormedia.example,chris.rivera@summitharbormedia.example,(316) 555-0126,3,2018,300k,,45,2.9,19
+Evergreen Prairie Cleaning Co,Commercial Cleaning,Knoxville,TN,https://www.evergreenprairiecleaningco.example,,(865) 555-0124,72,2007,$13.0M,Pat Lindqvist,64,3.9,9
+Northstar Evergreen Auto Care Inc.,Auto Repair,Spokane,WA,https://www.northstarevergreenautocare.example,jamie.okafor@northstarevergreenautocare.example,(509) 555-0142,,,7900k,,59,4.5,59
+Harbor Northstar Lawn & Landscape,Landscaping,Spokane,WA,https://www.harbornorthstarlawnlandscape.example,pat.rivera@harbornorthstarlawnlandscape.example,(509) 555-0193,24,2007,$2.8M,Pat Rivera,65,,
+,,Columbus,OH,,,,,,,,,,
+Summit Harbor Heating & Air,HVAC Contractor,Raleigh,NC,https://www.summitharborheatingair.example,taylor.walker@summitharborheatingair.example,(919) 555-0171,,2005,$4.7M,Taylor Walker,,4.1,91
+Ridge Silverline Pest Control,Pest Control,Fort Wayne,IN,https://www.ridgesilverlinepestcontrol.example,info@ridgesilverlinepestcontrol.example,(260) 555-0190,116-124,2024,60000000,Casey Patel,38,4,11
+Copper Ironwood Cleaning Co,Commercial Cleaning,Wichita,KS,https://www.copperironwoodcleaningco.example,pat.rivera@copperironwoodcleaningco.example,(316) 555-0188,36,1985,7200k,Pat Rivera,72,,
