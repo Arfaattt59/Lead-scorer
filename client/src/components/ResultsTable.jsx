@@ -10,6 +10,14 @@ const EMAIL_LABEL = {
 };
 const BAD_EMAIL = ['invalid', 'no-mail-server', 'missing'];
 
+const PAGE = 50;
+const SORTS = {
+  rank: (a, b) => a.rank - b.rank,
+  name: (a, b) => a.name.localeCompare(b.name),
+  score: (a, b) => a.score - b.score,
+  tier: (a, b) => a.tier.localeCompare(b.tier) || a.rank - b.rank,
+};
+
 const location = (l) => [l.city, l.state].filter(Boolean).join(', ') || '—';
 
 function Details({ lead }) {
@@ -44,6 +52,8 @@ export default function ResultsTable({ leads, onExport, exporting }) {
   const [query, setQuery] = useState('');
   const [hideBadEmail, setHideBadEmail] = useState(false);
   const [open, setOpen] = useState(() => new Set());
+  const [sort, setSort] = useState({ key: 'rank', dir: 'asc' });
+  const [limit, setLimit] = useState(PAGE);
 
   const visible = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -54,6 +64,20 @@ export default function ResultsTable({ leads, onExport, exporting }) {
     ));
   }, [leads, tier, query, hideBadEmail]);
 
+  const sorted = useMemo(() => {
+    const list = [...visible].sort(SORTS[sort.key]);
+    return sort.dir === 'desc' ? list.reverse() : list;
+  }, [visible, sort]);
+  const shown = sorted.slice(0, limit);
+
+  const sortBy = (key) => setSort((s) => (s.key === key ? { key, dir: s.dir === 'asc' ? 'desc' : 'asc' } : { key, dir: key === 'score' ? 'desc' : 'asc' }));
+  const ariaSort = (key) => (sort.key === key ? (sort.dir === 'asc' ? 'ascending' : 'descending') : 'none');
+  const sortTh = (k, label) => (
+    <th aria-sort={ariaSort(k)}>
+      <button type="button" className="th-sort" onClick={() => sortBy(k)}>{label}<span aria-hidden="true">{sort.key === k ? (sort.dir === 'asc' ? ' ▲' : ' ▼') : ''}</span></button>
+    </th>
+  );
+
   const toggle = (rank) => setOpen((prev) => {
     const next = new Set(prev);
     if (next.has(rank)) next.delete(rank); else next.add(rank);
@@ -63,9 +87,10 @@ export default function ResultsTable({ leads, onExport, exporting }) {
   return (
     <section className="card results">
       <div className="toolbar">
+        <p className="count" aria-live="polite">Showing <b>{visible.length}</b> of {leads.length}</p>
         <div className="seg" role="group" aria-label="Filter by tier">
           {['all', 'A', 'B', 'C'].map((t) => (
-            <button key={t} type="button" className={tier === t ? 'on' : ''} onClick={() => setTier(t)}>
+            <button key={t} type="button" className={tier === t ? 'on' : ''} onClick={() => { setTier(t); setLimit(PAGE); }}>
               {t === 'all' ? 'All' : `Tier ${t}`}
             </button>
           ))}
@@ -75,11 +100,11 @@ export default function ResultsTable({ leads, onExport, exporting }) {
           type="search"
           placeholder="Search name, industry, city, owner"
           value={query}
-          onChange={(e) => setQuery(e.target.value)}
+          onChange={(e) => { setQuery(e.target.value); setLimit(PAGE); }}
           aria-label="Search leads"
         />
         <label className="check">
-          <input type="checkbox" checked={hideBadEmail} onChange={(e) => setHideBadEmail(e.target.checked)} />
+          <input type="checkbox" checked={hideBadEmail} onChange={(e) => { setHideBadEmail(e.target.checked); setLimit(PAGE); }} />
           Hide leads with bad or missing email
         </label>
         <button type="button" className="btn primary" disabled={visible.length === 0 || exporting} onClick={() => onExport(visible)}>
@@ -91,12 +116,12 @@ export default function ResultsTable({ leads, onExport, exporting }) {
         <table>
           <thead>
             <tr>
-              <th>#</th><th>Business</th><th>Industry</th><th>Location</th>
-              <th>Score</th><th>Tier</th><th>Email</th><th>Data</th>
+              {sortTh('rank', '#')}{sortTh('name', 'Business')}<th className="col-sec">Industry</th><th className="col-sec">Location</th>
+              {sortTh('score', 'Score')}{sortTh('tier', 'Tier')}<th className="col-mid">Email</th><th className="col-sec">Data</th>
             </tr>
           </thead>
           <tbody>
-            {visible.map((l) => {
+            {shown.map((l) => {
               const isOpen = open.has(l.rank);
               return (
                 <Fragment key={l.rank}>
@@ -108,9 +133,9 @@ export default function ResultsTable({ leads, onExport, exporting }) {
                     aria-expanded={isOpen}
                   >
                     <td className="num">{l.rank}</td>
-                    <td className="name">{l.name}</td>
-                    <td>{l.industry ?? '—'}</td>
-                    <td>{location(l)}</td>
+                    <td className="name">{l.name}<div className="sub">{[l.industry, location(l) === '—' ? null : location(l)].filter(Boolean).join(' · ')}</div></td>
+                    <td className="col-sec">{l.industry ?? '—'}</td>
+                    <td className="col-sec">{location(l)}</td>
                     <td>
                       <div className="score">
                         <div className="bar"><span style={{ width: `${l.score}%` }} /></div>
@@ -118,10 +143,10 @@ export default function ResultsTable({ leads, onExport, exporting }) {
                       </div>
                     </td>
                     <td><span className={`pill tier-${l.tier}`}>{l.tier}</span></td>
-                    <td className={BAD_EMAIL.includes(l.emailStatus) ? 'bad' : ''}>
+                    <td className={`col-mid${BAD_EMAIL.includes(l.emailStatus) ? ' bad' : ''}`}>
                       {EMAIL_LABEL[l.emailStatus] ?? '—'}{l.emailRole ? ' (generic)' : ''}
                     </td>
-                    <td>{l.confidence}</td>
+                    <td className="col-sec">{l.confidence}</td>
                   </tr>
                   {isOpen && (
                     <tr className="detail-row"><td colSpan={8}><Details lead={l} /></td></tr>
@@ -131,8 +156,18 @@ export default function ResultsTable({ leads, onExport, exporting }) {
             })}
           </tbody>
         </table>
-        {visible.length === 0 && <p className="empty">No leads match these filters.</p>}
+        {visible.length === 0 && (
+          <div className="empty">
+            <p>No leads match these filters.</p>
+            <button type="button" className="btn" onClick={() => { setTier('all'); setQuery(''); setHideBadEmail(false); }}>Clear filters</button>
+          </div>
+        )}
       </div>
+      {sorted.length > shown.length && (
+        <div className="more">
+          <button type="button" className="btn" onClick={() => setLimit((n) => n + PAGE)}>Show {Math.min(PAGE, sorted.length - shown.length)} more ({sorted.length - shown.length} left)</button>
+        </div>
+      )}
       <p className="hint foot">Click a row to see why it scored the way it did.</p>
     </section>
   );

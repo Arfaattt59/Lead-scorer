@@ -61,50 +61,55 @@ The application separates the user interface from the backend processing layer.
 
 ### Prerequisites
 
-- Node.js and npm
-- Git
-- MongoDB only if you intend to configure the optional database integration
+- Node.js 20 or newer (22 recommended) with npm. Check with `node -v` and `npm -v`.
+- MongoDB only if you want saved runs to survive a restart. Without it the API keeps runs in memory.
 
-### 1. Clone the repository
+### Environment variables
 
-```bash
-git clone https://github.com/Arfaattt59/Lead-scorer.git
-cd Lead-scorer
-```
+Both are optional for a local run.
 
-### 2. Configure the backend
+| File | Variable | Meaning |
+|---|---|---|
+| `server/.env` | `MONGODB_URI` | MongoDB connection string. Leave empty to use in-memory storage. |
+| `server/.env` | `PORT` | API port. Default `4000`. The client dev server proxies `/api` to port 4000, so keep it unless you also edit `client/vite.config.js`. |
+| `server/.env` | `CORS_ORIGIN` | Comma-separated allowed frontend origins in production. Not needed locally. |
+| `client/.env` | `VITE_API_URL` | Only for a hosted API. Leave empty locally (the dev proxy is used). |
 
-```bash
+Copy `server/.env.example` to `server/.env` and `client/.env.example` to `client/.env` if you want to change anything. Never commit real values.
+
+### Install
+
+```powershell
 cd server
 npm install
-```
-
-Configure the backend environment variables according to the server's environment configuration and the storage mode you intend to use.
-
-Start the backend using the development command defined in `server/package.json`.
-
-### 3. Configure the frontend
-
-Open a second terminal:
-
-```bash
-cd client
+cd ..\client
 npm install
 ```
 
-Create or update the client's `.env` file with the backend URL:
+### Start (two terminals)
 
-```env
-VITE_API_URL=http://localhost:YOUR_BACKEND_PORT
+```powershell
+# terminal 1: API on http://localhost:4000
+cd server
+npm run dev
+
+# terminal 2: web app on http://localhost:5173
+cd client
+npm run dev
 ```
 
-Replace `YOUR_BACKEND_PORT` with the port configured by the backend. Keep the URL consistent with the API configuration in the code.
+Open http://localhost:5173 and click **Use sample data**, then **Score leads**.
 
-Start the frontend using the development command defined in `client/package.json`.
+### Tests and build
 
-Open the local URL printed by Vite in your terminal.
+```powershell
+cd server; npm test
+cd ..\client; npm test
+npm run build        # production build into client/dist
+npm run preview      # serve the built client
+```
 
-> **Note:** Use the actual scripts defined in each `package.json`. Do not commit environment files containing credentials or secrets.
+CI (`.github/workflows/ci.yml`) runs the same two test commands on Node 22.
 
 ## Deployment
 

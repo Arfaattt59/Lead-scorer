@@ -45,7 +45,7 @@ export default function UploadCard({ info, onLoaded }) {
   }
 
   return (
-    <section className="card">
+    <section className="card" id="step-load">
       <h2><span className="step">1</span> Load your leads</h2>
       <p className="hint">
         Upload a CSV with one business per row. Common column names are recognised automatically

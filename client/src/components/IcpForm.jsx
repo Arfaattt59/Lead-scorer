@@ -16,7 +16,7 @@ export default function IcpForm({ icp, onChange, onReset }) {
   const set = (patch) => onChange({ ...icp, ...patch });
 
   return (
-    <section className="card">
+    <section className="card" id="step-target">
       <h2><span className="step">2</span> Describe your ideal target</h2>
       <p className="hint">Leads are scored against this profile. Change it to match what you are looking to buy.</p>
 

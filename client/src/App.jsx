@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { useThemePref } from './useTheme.js';
 import { getDefaults, scoreLeads, exportCsv, listRuns, getRun } from './api.js';
 import UploadCard from './components/UploadCard.jsx';
 import IcpForm from './components/IcpForm.jsx';
@@ -20,6 +21,15 @@ export default function App() {
   const [loading, setLoading] = useState(false);
   const [exporting, setExporting] = useState(false);
   const [error, setError] = useState('');
+  const [themePref, setThemePref] = useThemePref();
+  const mainRef = useRef(null);
+
+  // On a phone the results sit under the form column, so bring them into view after a run.
+  useEffect(() => {
+    if (runCount > 0 && window.matchMedia?.('(max-width: 900px)').matches) {
+      mainRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, [runCount]);
 
   const refreshRuns = () => listRuns().then(setRuns).catch(() => {});
 
@@ -78,6 +88,7 @@ export default function App() {
 
   return (
     <>
+      <a className="skip" href="#results">Skip to results</a>
       <header className="site-header">
         <div className="site-header-inner">
           <div className="brand">
@@ -89,8 +100,20 @@ export default function App() {
               <p>Rank small-business leads by how well they fit what you want to buy.</p>
             </div>
           </div>
+          <nav className="steps-nav" aria-label="Sections">
+            <a href="#step-load">1 Load</a>
+            <a href="#step-target">2 Target</a>
+            <a href="#step-score">3 Score</a>
+            <a href="#results">Results</a>
+          </nav>
           <div className="header-right">
-            <span className="header-tag">Built for the Caprae Capital pre-work</span>
+            <div className="seg theme-toggle" role="group" aria-label="Colour theme">
+              {[['system', 'Auto'], ['light', 'Light'], ['dark', 'Dark']].map(([v, label]) => (
+                <button key={v} type="button" className={themePref === v ? 'on' : ''} aria-pressed={themePref === v} onClick={() => setThemePref(v)}>
+                  {label}
+                </button>
+              ))}
+            </div>
             <img
               className="partner-logo"
               src={`${import.meta.env.BASE_URL}caprae-logo.png`}
@@ -102,9 +125,14 @@ export default function App() {
       </header>
 
       <div className="page">
-        {error && <div className="banner" role="alert">{error}</div>}
+        {error && (
+          <div className="banner" role="alert">
+            <span>{error}</span>
+            <button type="button" className="banner-x" aria-label="Dismiss error" onClick={() => setError('')}>×</button>
+          </div>
+        )}
 
-        <div className="layout">
+        <div className={`layout${result || loading ? ' has-results' : ''}`}>
           <aside className="side">
             <UploadCard info={file} onLoaded={(f) => { setFile(f); setResult(null); }} />
             {icp && (
@@ -115,7 +143,7 @@ export default function App() {
                 onReset={() => { setIcp(defaults); setFormKey((k) => k + 1); }}
               />
             )}
-            <section className="card">
+            <section className="card" id="step-score">
               <h2><span className="step">3</span> Score them</h2>
               <label className="check">
                 <input type="checkbox" checked={checkMx} onChange={(e) => setCheckMx(e.target.checked)} />
@@ -129,7 +157,7 @@ export default function App() {
             <RecentRuns runs={runs} onOpen={openRun} disabled={loading} />
           </aside>
 
-          <main className="main">
+          <main className="main" id="results" ref={mainRef} tabIndex={-1}>
             {loading ? (
               <ResultsSkeleton />
             ) : result ? (
@@ -140,12 +168,12 @@ export default function App() {
             ) : (
               <section className="card empty-state">
                 <h2>How it works</h2>
-                <ol>
-                  <li><b>Clean:</b> duplicates are merged and bad emails are flagged.</li>
-                  <li><b>Score:</b> each business is rated 0-100 for acquisition fit: industry, size, revenue, track record,
-                    owner age (a succession signal), reputation, and how reachable the owner is.</li>
-                  <li><b>Explain:</b> every score comes with reasons, so you can trust it or change the profile.</li>
-                  <li><b>Export:</b> download the ranked list as a CSV, best leads first.</li>
+                <ol className="how">
+                  <li><b>Clean</b><span>Duplicates are merged and bad emails are flagged.</span></li>
+                  <li><b>Score</b><span>Each business gets 0-100 for acquisition fit: industry, size, revenue, track record,
+                    owner age (a succession signal), reputation and how reachable the owner is.</span></li>
+                  <li><b>Explain</b><span>Every score comes with reasons, so you can trust it or change the profile.</span></li>
+                  <li><b>Export</b><span>Download the ranked list as a CSV, best leads first.</span></li>
                 </ol>
                 <p className="hint">New here? Click <b>Use sample data</b> to try it with made-up businesses.</p>
               </section>
